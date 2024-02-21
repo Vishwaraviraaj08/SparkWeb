@@ -208,7 +208,7 @@ a:focus,
   display: table;
   width: 100%;
   padding: 0;
-  background: url(../img/intro-bg.jpg) center center no-repeat;
+  background: url('https://assets.ey.com/content/dam/ey-sites/ey-com/en_lu/topics/wealth-and-asset-management/ey-luxembourg-digitalization-asset-servicing.jpg.rendition.450.300.jpg') center center no-repeat;
   background-color: #e5e5e5;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -243,6 +243,10 @@ header .intro-text {
   padding-top: 350px;
   padding-bottom: 200px;
   text-align: center;
+  font-weight: bolder;
+  color: #fff;
+  /*transform: scale3d(1.5);*/
+  font-family: "Raleway", sans-serif;
 }
 /* Features Section */
 #features {
@@ -604,3 +608,5 @@ label {
     margin: 50px 0;
   }
 }
+
+

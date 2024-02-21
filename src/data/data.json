@@ -1,21 +1,17 @@
 {
   "Header": {
-    "title": "We are a Landing Page",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+    "title": "CAMWARE SPECIALIZATION",
+    "paragraph": "Leads to Technology, Products and Services"
   },
   "About": {
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Why": [
-      "Lorem ipsum dolor",
-      "Tempor incididunt",
-      "Lorem ipsum dolor",
-      "Incididunt ut labore"
-    ],
-    "Why2": [
-      "Aliquip ex ea commodo",
-      "Lorem ipsum dolor",
-      "Exercitation ullamco",
-      "Lorem ipsum dolor"
+    "paragraph": "is a startup EMS Company established in the year 2016 in Chennai, India, jointly by five engineers who perceived the concept of comprehensive solution in Electronic Manufacturing Services (EMS) under single roof.We determined to focus on the complete spectrum of state of the art and emerging technologies in EMS to bring a positive change in the arena of Electronics Manufacturing Industries. Presently, we have teamed up with competent professionals and skilled & qualified partners having expertise in the following domains",
+    "domains": [
+      "Electronic Hardware Product Developement & Embedded Solutions",
+      "Electronic SystemDesign & Manufacturing Services (ESDM)",
+      "Original Design and Manufacturing Services (ODM)",
+      "Internet of Things (IoT) Solutions",
+      "IT Infrastructure Management Services (IMS)",
+      "Offset Program for OEM products in India"
     ]
   },
   "Gallery": [
