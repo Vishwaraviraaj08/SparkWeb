@@ -63,34 +63,34 @@
   ],
   "Services": [
     {
-      "icon": "fa fa-wordpress",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-home",
+      "name": "Smart Home",
+      "text": "Smart Home leads IoT with high search volumes and $2.5 billion funding, offering convenience through interconnected devices for home automation. With 256 companies dedicated to this field, it promises efficient living."
     },
     {
-      "icon": "fa fa-cart-arrow-down",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-building-o",
+      "name": "Smart City",
+      "text": "Smart City solutions address urban challenges from traffic management to environmental monitoring, aiming for sustainable and livable cities. With diverse use cases, it attracts attention for improving urban quality of life."
     },
     {
-      "icon": "fa fa-cloud-download",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-th",
+      "name": "Smart Grids",
+      "text": "Smart Grids enhance electricity distribution efficiency and reliability through automation, with growing interest despite modest social media buzz. With 41,000 monthly searches, it signifies a push towards optimizing energy infrastructure."
     },
     {
-      "icon": "fa fa-language",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-car",
+      "name": "Connected Car",
+      "text": "The Connected Car market is evolving with major players investing in internet-connected vehicle solutions, poised to reshape automotive technology. As industry giants like Google, Microsoft, and Apple enter the arena, anticipation for its future grows."
     },
     {
-      "icon": "fa fa-plane",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-heartbeat",
+      "name": "Connected Health",
+      "text": "Connected Health holds promise for healthcare innovation and improved patient outcomes, despite its current underwhelming adoption. With significant potential for impact, its growth trajectory is eagerly awaited."
     },
     {
-      "icon": "fa fa-pie-chart",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-link",
+      "name": "Smart Supply Chain",
+      "text": "Smart Supply Chain solutions aim to enhance logistics efficiency and visibility, though their popularity in IoT remains moderate. As IoT integration advances, further improvements in supply chain management are expected."
     }
   ],
   "Testimonials": [

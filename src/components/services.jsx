@@ -77,7 +77,7 @@ export const Services = (props) => {
                                 <i className={d.icon}></i>
                                 <div className="service-desc">
                                     <h3>{d.name}</h3>
-                                    <p>{d.text}</p>
+                                    <p style={{textAlign:"center", fontSize:"130%"}}>{d.text}</p>
                                 </div>
                             </div>
                         ))
