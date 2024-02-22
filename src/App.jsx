@@ -5,8 +5,8 @@ import { Header } from "./components/header";
 import { About } from "./components/about";
 import { Services } from "./components/services";
 import { Gallery } from "./components/gallery";
-import { Testimonials } from "./components/testimonials";
-import { Team } from "./components/Team";
+// import { Testimonials } from "./components/testimonials";
+// import { Team } from "./components/Team";
 import { Contact } from "./components/contact";
 import {Solutions} from "./components/solutions";
 import JsonData from "./data/data.json";
@@ -33,8 +33,8 @@ const App = () => {
       <Services data={landingPageData.Services} />
         <Solutions/>
       <Gallery data={landingPageData.Gallery} />
-      <Testimonials data={landingPageData.Testimonials} />
-      <Team data={landingPageData.Team} />
+      {/* <Testimonials data={landingPageData.Testimonials} /> */}
+      {/* <Team data={landingPageData.Team} /> */}
       <Contact data={landingPageData.Contact} />
     </div>
   );

@@ -31,15 +31,15 @@ export const Services = (props) => {
                         <div className="carousel-inner" role="listbox">
                             {/* Slide 1 */}
                             <div className="item active">
-                                <img src="https://ceciliasluxelife.com/wp-content/uploads/2019/05/Nice-city-view.jpg" alt="Sunset over beach" />
+                                <img src="img\services\glow-core.jpg" alt="Sunset over beach" />
                             </div>
                             {/* Slide 2 */}
                             <div className="item">
-                                <img src="https://ceciliasluxelife.com/wp-content/uploads/2019/05/Nice-city-view.jpg" alt="Rob Roy Glacier" />
+                                <img src="img\services\globe-core.jpg" alt="Rob Roy Glacier" />
                             </div>
                             {/* Slide 3 */}
                             <div className="item">
-                                <img src="https://ceciliasluxelife.com/wp-content/uploads/2019/05/Nice-city-view.jpg" alt="Longtail boats at Phi Phi" />
+                                <img src="img\services\arc-core.jpg" alt="Longtail boats at Phi Phi" />
                             </div>
                         </div>
                         {/* Previous/Next controls */}
@@ -66,7 +66,7 @@ export const Services = (props) => {
 
 
                 <br/>
-                <div className="row">
+                <div className="row" style={{marginTop:"10px"}}>
                     {props.data
                         ? props.data.map((d, i) => (
                             <div key={`${d.name}-${i}`} className="col-md-4">
@@ -74,7 +74,7 @@ export const Services = (props) => {
                                 <i className={d.icon}></i>
                                 <div className="service-desc">
                                     <h3>{d.name}</h3>
-                                    <p>{d.text}</p>
+                                    <p style={{textAlign:"center", fontSize:"130%"}}>{d.text}</p>
                                 </div>
                             </div>
                         ))
