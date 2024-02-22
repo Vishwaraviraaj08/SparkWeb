@@ -1,6 +1,9 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import React from "react";
+// import '../../public/css/style.css';
+// import './style.css';
+import './componentStyle.css';
 
 const initialState = {
   name: "",
@@ -52,10 +55,11 @@ export const Contact = (props) => {
                   <div className="col-md-6">
                     <div className="form-group">
                       <input
+                        
                         type="text"
                         id="name"
                         name="name"
-                        className="form-control"
+                        className="input-field"
                         placeholder="Name"
                         required
                         onChange={handleChange}
@@ -69,7 +73,7 @@ export const Contact = (props) => {
                         type="email"
                         id="email"
                         name="email"
-                        className="form-control"
+                        className="input-field"
                         placeholder="Email"
                         required
                         onChange={handleChange}
@@ -82,7 +86,7 @@ export const Contact = (props) => {
                   <textarea
                     name="message"
                     id="message"
-                    className="form-control"
+                    className="input-field"
                     rows="4"
                     placeholder="Message"
                     required
@@ -129,17 +133,17 @@ export const Contact = (props) => {
               <div className="social">
                 <ul>
                   <li>
-                    <a href={props.data ? props.data.facebook : "/"}>
+                    <a href={props.data ? props.data.facebook : "#"}>
                       <i className="fa fa-facebook"></i>
                     </a>
                   </li>
                   <li>
-                    <a href={props.data ? props.data.twitter : "/"}>
+                    <a href={props.data ? props.data.twitter : "#"}>
                       <i className="fa fa-twitter"></i>
                     </a>
                   </li>
                   <li>
-                    <a href={props.data ? props.data.youtube : "/"}>
+                    <a href={props.data ? props.data.youtube : "#"}>
                       <i className="fa fa-youtube"></i>
                     </a>
                   </li>
@@ -151,12 +155,12 @@ export const Contact = (props) => {
       </div>
       <div id="footer">
         <div className="container text-center">
-          <p>
+          {/* <p>
             &copy; 2023 Issaaf Kattan React Land Page Template. Design by{" "}
             <a href="http://www.templatewire.com" rel="nofollow">
               TemplateWire
             </a>
-          </p>
+          </p> */}
         </div>
       </div>
     </div>
