@@ -1,5 +1,5 @@
-import React from 'react'
-import {Link} from "react-router-dom";
+import React, {useState} from 'react'
+import {Link, useNavigate} from "react-router-dom";
 
 export default function signUp() {
     const backStyle = {
@@ -33,13 +33,19 @@ export default function signUp() {
         verticalAlign: 'middle',
     };
 
+    const [message, setMessage] = useState('');
+    let navigate = useNavigate();
+    const routeChange = (path) => {
+        navigate(path);
+    }
+
     return (
         <div style={backStyle} className='padding-correction'>
             <div style={divCenterStyle}>
                 <div style={contentStyle}>
                     <h3>SignUp</h3>
                     <h1 style={{margin: '50px'}}></h1>
-                    <form method={'POST'}>
+                    <div>
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1">Email address</label>
                             <input type="email" className="form-control" id="email" placeholder="Email" />
@@ -50,14 +56,40 @@ export default function signUp() {
                         </div>
                         <div className="form-group">
                             <label htmlFor="exampleInputPassword1">Confirm Password</label>
-                            <input type="password" className="form-control" id="password" placeholder="Password" />
+                            <input type="password" className="form-control" id="confirmPassword" placeholder="Password" />
                         </div>
                         <h1 style={{margin: '40px'}}></h1>
 
                         <Link to={'/login'} type="button" className="btn btn-link">LogIn</Link>
-                        <button type="submit" className="btn btn-primary">Sign Up</button>
+                        <button className="btn btn-primary" onClick={() => {
+                            let email = document.getElementById('email').value;
+                            let password = document.getElementById('password').value;
+                            fetch('http://localhost:8080/user/login', {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json",
+                                    "Accept": "application/json",
+
+                                },
+                                body: JSON.stringify({ email, password })
+                            }).then(res => res.json()).then(data => {
+                                if (data.auth === true) {
+                                    setLogin(true);
+                                    console.log(data);
+                                    routeChange('/');
+                                    setMessage('');
+                                }
+                                else {
+                                    setMessage(data.message);
+                                    console.log(data);
+                                }
+                            }).catch(err => {
+                                console.log(err);
+                            });
+                            //    console.log('Logged in');
+                        }}>Sign Up</button>
                         <h1 style={{margin: '40px'}}></h1>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,12 +1,23 @@
-import React from 'react'
-import { useParams } from "react-router-dom";
+import React, {useEffect} from 'react'
+import {Router, useParams, Navigate} from "react-router-dom";
 import data from "../../data/productInfo.js";
+import {useNavigate} from "react-router-dom";
+
 export default function ProductDetails() {
-  let { productId } = useParams();
-  let item = data.find(product => product.productLink === productId);
-  console.log(item);
-  return (<>
-    {/* <style>
+    let {productId} = useParams();
+
+    let item = data.find((item) => {
+        if (item.productCode === productId) {
+            return item;
+        }
+    });
+    if(!item) {
+        return <Navigate to="/"/>
+    }
+
+    return (<>
+
+        <style>
             {`
 
 p .paragraph {
@@ -130,33 +141,32 @@ h3 .heading3 {
 
             
             `}
-        </style> */}
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <div id="product">
-      <div className="product_images" ></div>
-      <div className="product_details">
+        </style>
 
-        <h2 className='heading2'>{item.productName}</h2>
-        <h3 className='heading3'>{item.price}</h3>
+        <div id="product" className={"padding-correction"}>
+            <div className="product_images"></div>
+            <div className="product_details">
 
-        <div className="about">
-          <p className='paragraph '>Availability :<span>{item.availability}</span></p>
-          <p className='paragraph '>Product Code : <span>{item.productCode}</span></p>
+                <h2 className='heading2'>{item.productName}</h2>
+                <h3 className='heading3'>{item.price}</h3>
+
+                <div className="about">
+                    <p className='paragraph '>Availability :<span>{item.availability}</span></p>
+                    <p className='paragraph '>Product Code : <span>{item.productCode}</span></p>
+                </div>
+
+                <p style={{fontSize: '20px'}}>{item.longDescription}</p>
+                <ul>
+                    <li>{item.shortDescription}</li>
+                </ul>
+
+
+                <div className="cta">
+                    <div className="btn-product-details btn_primary">add to cart</div>
+                    <div className="btn-product-details btn_outline_secondary">
+                        <span className="material-symbols-outlined"></span><b>Order</b></div>
+                </div>
+            </div>
         </div>
-
-        <p style={{ fontSize: '20px' }}>{item.longDescription}</p>
-        <ul>
-          <li>{item.shortDescription}</li>
-        </ul>
-
-
-        <div className="cta">
-          <div className="btn-product-details btn_primary">add to cart</div>
-          <div className="btn-product-details btn_outline_secondary">
-            <span className="material-symbols-outlined"></span><b>Order</b></div>
-        </div>
-      </div>
-    </div>
-  </>)
+    </>)
 }

@@ -29,10 +29,9 @@ const App = () => {
         {/* add .padding-correction to root elements for the following components */}
         <Route path='/login' element={<Login login={login} setLogin={setLogin}/>}/>
         <Route path='/signup' element={<Signup/>}/>
-        <Route path='/products' element={<Products/>}/>
         <Route path='/profile' element={<Profile/>}/>
         <Route path="/products" element={<Product />} />
-        <Route path="/products/:productId" element={<ProductDetails/>}/>
+        <Route path="/:productId" element={<ProductDetails/>}/>
       </Routes>
       
     </div>

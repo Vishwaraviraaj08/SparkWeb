@@ -27,7 +27,7 @@ export default function Products() {
                          }}/>
                     <h2 style={{fontSize: '18px', marginTop: '10px'}}>{item.productName}</h2>
                     <p>{item.shortDescription}</p>
-                    <Link to={item.productLink} style={{textDecoration: 'none', color: 'black'}}>Purchase</Link>
+                    <Link to={"/" + item.productCode} style={{textDecoration: 'none', color: 'black'}}>Purchase</Link>
                 </div>
             ))}
         </div>
