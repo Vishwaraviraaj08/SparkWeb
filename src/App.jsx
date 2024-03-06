@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { Navigation } from "./components/navigation";
-import { Header } from "./components/header";
-// import { Features } from "./components/features";
-import { About } from "./components/about";
-import { Services } from "./components/services";
-import { Gallery } from "./components/gallery";
-// import { Testimonials } from "./components/testimonials";
-// import { Team } from "./components/Team";
-import { Contact } from "./components/contact";
-import {Solutions} from "./components/solutions";
-import JsonData from "./data/data.json";
+import React, {useState} from "react";
+import {Routes, Route} from 'react-router-dom'
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
+
+import { Navigation } from "./components/navigation";
+import { Home } from "./components/Home/home.jsx";
+import Login from './components/newComponents/login';
+import Signup from './components/newComponents/signup.js';
+import Products from './components/newComponents/products';
+import Profile from './components/newComponents/profile';
+import Product from "./components/newComponents/products";
+import ProductDetails from "./components/newComponents/productDetails";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -19,23 +18,23 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 const App = () => {
-  const [landingPageData, setLandingPageData] = useState({});
-  useEffect(() => {
-    setLandingPageData(JsonData);
-  }, []);
-
+  
+  const [login, setLogin] = useState(false)
   return (
     <div>
-      <Navigation />
-      <Header data={landingPageData.Header} />
-        <About data={landingPageData.About} />
-        {/*<Features data={landingPageData.Features} />*/}
-      <Services data={landingPageData.Services} />
-        <Solutions/>
-      <Gallery data={landingPageData.Gallery} />
-      {/* <Testimonials data={landingPageData.Testimonials} /> */}
-      {/* <Team data={landingPageData.Team} /> */}
-      <Contact data={landingPageData.Contact} />
+      <Navigation login={login}/>
+      <Routes>
+        
+        <Route path='/' element={<Home/>}/>
+        {/* add .padding-correction to root elements for the following components */}
+        <Route path='/login' element={<Login login={login} setLogin={setLogin}/>}/>
+        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/products' element={<Products/>}/>
+        <Route path='/profile' element={<Profile/>}/>
+        <Route path="/products" element={<Product />} />
+        <Route path="/products/:productId" element={<ProductDetails/>}/>
+      </Routes>
+      
     </div>
   );
 };

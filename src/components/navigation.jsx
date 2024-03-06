@@ -1,6 +1,6 @@
-import React from "react";
-
-export const Navigation = (props) => {
+import React, { useState } from "react";
+import {Link} from 'react-router-dom'
+export const Navigation = ({login}) => {
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
@@ -27,11 +27,7 @@ export const Navigation = (props) => {
           id="bs-example-navbar-collapse-1"
         >
           <ul className="nav navbar-nav navbar-right">
-            {/* <li>
-              <a href="#features" className="page-scroll">
-                Features
-              </a>
-            </li> */}
+            
             <li>
               <a href="#about" className="page-scroll">
                 About
@@ -45,6 +41,11 @@ export const Navigation = (props) => {
             <li>
               <a href="#portfolio" className="page-scroll">
                 Infra-Facilities
+              </a>
+            </li>
+            <li>
+              <a href="/products" className="page-scroll">
+                Products
               </a>
             </li>
             {/* <li>
@@ -61,6 +62,36 @@ export const Navigation = (props) => {
               <a href="#contact" className="page-scroll">
                 Contact
               </a>
+            </li>
+            <li>
+              {!login && (
+                <Link to="/login" className="page-scroll">
+                  LOGIN
+                </Link>
+              )}
+              {login && (
+                <div style={{position: "relative"}} className="dropdown ">
+                  <button
+                  style={{border: "none", backgroundColor: "inherit", }}
+                    className="dropdown-toggle"
+                    type="button"
+                    id="dropdownMenu1"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="true"
+                  >
+                    PROFILE
+                    <span className="caret"></span>
+                  </button>
+                  <ul className="dropdown-menu " aria-labelledby="dropdownMenu1">
+                    <li><Link to="/cart">Cart</Link></li>
+                    <li><Link to="/profile">Profile</Link></li>
+                    <li><a href="#orders">My Orders</a></li>
+                    <li role="separator" className="divider"></li>
+                    <li><Link to="/logout">Logout</Link></li>
+                  </ul>
+                </div>
+              )}
             </li>
           </ul>
         </div>
