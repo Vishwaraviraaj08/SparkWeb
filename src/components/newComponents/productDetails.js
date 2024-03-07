@@ -3,7 +3,7 @@ import {Router, useParams, Navigate} from "react-router-dom";
 import data from "../../data/productInfo.js";
 import {useNavigate} from "react-router-dom";
 
-export default function ProductDetails() {
+export default function ProductDetails({cart, setCart}) {
     let {productId} = useParams();
 
     let item = data.find((item) => {
@@ -162,7 +162,25 @@ h3 .heading3 {
 
 
                 <div className="cta">
-                    <div className="btn-product-details btn_primary">add to cart</div>
+                    <div className="btn-product-details btn_primary" onClick={
+                        () => {
+                            let existingItem = cart.find((cartItem) => {
+                                if (cartItem.productCode === item.productCode) {
+                                    return cartItem;
+                                }
+                            });
+                            if (existingItem) {
+                                let newCart = cart.map((cartItem) => {
+                                    if (cartItem.productCode === item.productCode) {
+                                        cartItem.quantity++;
+                                    }
+                                    return cartItem;
+                                });
+                                setCart(newCart);
+                            } else {
+                                setCart([...cart, {...item, quantity: 1}]);
+                        }
+                    }}>add to cart</div>
                     <div className="btn-product-details btn_outline_secondary">
                         <span className="material-symbols-outlined"></span><b>Order</b></div>
                 </div>

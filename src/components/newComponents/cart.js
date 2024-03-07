@@ -2,7 +2,8 @@ import React from 'react'
 import productInfo from '../../data/productInfo'
 
 
-export default function Cart() {
+export default function Cart({cart, setCart}) {
+    console.log(cart)
     return (<>
 
         <style>
@@ -1467,7 +1468,7 @@ body {
                     <div className="cart_responsive">
 
 
-                        {productInfo.map((item, index) => {
+                        {cart.map((item, index) => {
                             return(<>
                         <div className="tr_item">
                             <div className="td_item item_img">

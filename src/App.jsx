@@ -21,6 +21,8 @@ const App = () => {
   
   const [login, setLogin] = useState(false)
   const [userId, setUserId] = useState('')
+  const [cart, setCart] = useState([])
+
   return (
     <div>
       <Navigation login={login}/>
@@ -31,9 +33,9 @@ const App = () => {
         <Route path='/login' element={<Login login={login} setLogin={setLogin} setUserId={setUserId}/>}/>
         <Route path='/signup' element={<Signup setLogin={setLogin} setUserId={setUserId}/>}/>
         <Route path='/profile' element={<Profile/>}/>
-        <Route path='/cart' element={<Cart/>}/>
+        <Route path='/cart' element={<Cart cart={cart} setCart={setCart} />}/>
         <Route path="/products" element={<Product />} />
-        <Route path="/:productId" element={<ProductDetails/>}/>
+        <Route path="/:productId" element={<ProductDetails cart={cart} setCart={setCart}/>}/>
       </Routes>
       
     </div>
