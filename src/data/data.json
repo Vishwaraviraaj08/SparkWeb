@@ -39,37 +39,8 @@
       "title": "SMT SOLDER PASTE PRINTER",
       "largeImage": "img/portfolio/06-large.jpg",
       "smallImage": "img/portfolio/06-small.jpg"
-    },
-    {
-      "title": "MAGNIFIER FOR QUALITY CHECKING",
-      "largeImage": "img/portfolio/07-large.jpg",
-      "smallImage": "img/portfolio/07-small.jpg"
-    },
-    {
-      "title": "WAVE SOLDERING MACHINE WITH THROUGH HOLE",
-      "largeImage": "img/portfolio/08-large.jpg",
-      "smallImage": "img/portfolio/08-small.jpg"
-    },
-    {
-      "title": "TEMPERATURE CONTROLLED SOLDERING IRON",
-      "largeImage": "img/portfolio/09-large.jpg",
-      "smallImage": "img/portfolio/09-small.jpg"
-    },
-    {
-      "title": "SMT REFLOW OVEN FOR SOLDERING",
-      "largeImage": "img/portfolio/10-large.jpg",
-      "smallImage": "img/portfolio/10-small.jpg"
-    },
-    {
-      "title": "SMT PICK & PLACE MACHINE",
-      "largeImage": "img/portfolio/11-large.jpg",
-      "smallImage": "img/portfolio/11-small.jpg"
-    },
-    {
-      "title": "DIGITAL VERNIER CALIPER",
-      "largeImage": "img/portfolio/12-large.jpg",
-      "smallImage": "img/portfolio/12-small.jpg"
     }
+    
   ],
   "Services": [
     {

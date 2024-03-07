@@ -1,9 +1,14 @@
 import React from 'react'
 import productInfo from '../../data/productInfo'
-
+import { Link } from 'react-router-dom'
 
 export default function Cart({cart, setCart}) {
     console.log(cart)
+    const style = {
+      border: 'none',
+      color: 'black',
+      height: 'inherit',
+    }
     return (<>
 
         <style>
@@ -1468,7 +1473,7 @@ body {
                     <div className="cart_responsive">
 
 
-                        {cart.map((item, index) => {
+                        {cart.map((item) => {
                             return(<>
                         <div className="tr_item">
                             <div className="td_item item_img">
@@ -1481,19 +1486,38 @@ body {
                             <div className="td_item item_color">
                                 <label></label>
                             </div>
-                            <div className="td_item item_qty">
-                                <select>
-                                    <option value={1}>1</option>
-                                    <option value={2}>2</option>
-                                    <option value={3}>3</option>
-                                    <option value={4}>4</option>
-                                    <option value={5}>5</option>
-                                </select>
+                            <div className="td_item" style={{display: 'flex', flexFlow: 'row nowrap', justifyContent: 'space-around', alignItems: 'center'}}>
+                            <div style={{...style, cursor: 'pointer'}} className="td_item " onClick={() => {
+                                  setCart(cart.map((product) => {
+                                      if(product.productCode === item.productCode){
+                                          return {...product, quantity: product.quantity - 1}
+                                      }
+                                      
+                                      return product;
+                                  }))
+                                  if(item.quantity === 1){
+                                      setCart(cart.filter((product) => product.productCode !== item.productCode))
+                                  }
+                              }}>-</div>
+                              <div style={{...style, cursor: 'default'}} className='td_item '>{item.quantity}</div>
+                              <div style={{...style, cursor: 'pointer'}} className="td_item " onClick={()=>{
+                                  setCart(cart.map((product) => {
+                                      if(product.productCode === item.productCode){
+                                          return {...product, quantity: product.quantity + 1}
+                                      }
+                                      return product;
+                                  }))
+                              
+                              }}>+</div>
+                              
+                              
                             </div>
                             <div className="td_item item_price">
                                 <label>&#8377; {item.price}</label>
                             </div>
-                            <div className="td_item item_remove">
+                            <div className="td_item item_remove" onClick= {()=>{
+                                setCart(cart.filter((product) => product.productCode !== item.productCode))
+                            }}>
                                 <span className="material-icons-outlined">close</span>
                             </div>
                         </div>
@@ -1507,10 +1531,10 @@ body {
                     </div>
                     <div className="footer">
                         <div className="back_cart">
-                            <a href="/">
+                            <Link to="/products">
                                 <span className="material-icons-outlined">west</span>
                                 Back to Products
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -1518,8 +1542,12 @@ body {
             <div className="cart_details">
                 <div className="cart_title">Cart Details</div>
                 <div className="subtotal text-warning ">
-                    <h4 style={{color:"#ffffff"}}>Subtotal :    &#8377; {222}</h4>
-                    <h4 style={{color:"#ffffff"}}>No of Items :   {222}</h4>
+                    <h4 style={{color:"#ffffff"}}>Subtotal :    &#8377; {
+                        cart.reduce((acc, item) => acc + item.quantity * item.price, 0)
+                    }</h4>
+                    <h4 style={{color:"#ffffff"}}>No of Items :   {
+                        cart.reduce((acc, item) => acc + item.quantity, 0)
+                    }</h4>
 
                 </div>
                 <div className="form_row">

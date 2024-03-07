@@ -1,6 +1,28 @@
 import React, { useState } from "react";
 import {Link} from 'react-router-dom'
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
 export const Navigation = ({login}) => {
+  const { pathname, hash, key } = useLocation();
+
+  useEffect(() => {
+    // if not a hash link, scroll to top
+    if (hash === '') {
+      window.scrollTo(0, 0);
+    }
+    // else scroll to id
+    else {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView();
+        }
+      }, 0);
+    }
+  }, [pathname, hash, key]); // do this on route change
+
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
@@ -17,9 +39,9 @@ export const Navigation = ({login}) => {
             <span className="icon-bar"></span>{" "}
             <span className="icon-bar"></span>{" "}
           </button>
-          <a className="navbar-brand page-scroll" href="#page-top">
+          <Link className="navbar-brand page-scroll" to="/#page-top">
             CAMWARE TECH
-          </a>{" "}
+          </Link>{" "}
         </div>
 
         <div
@@ -29,39 +51,30 @@ export const Navigation = ({login}) => {
           <ul className="nav navbar-nav navbar-right">
             
             <li>
-              <a href="/#about" className="page-scroll">
+              <Link to="/#about" className="page-scroll">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#services" className="page-scroll">
+              <Link to="/#services" className="page-scroll">
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#portfolio" className="page-scroll">
+              <Link to="/#portfolio" className="page-scroll">
                 Infra-Facilities
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/products" className="page-scroll">
+              <Link to="/products" className="page-scroll">
                 Products
-              </a>
+              </Link>
             </li>
-            {/* <li>
-              <a href="#testimonials" className="page-scroll">
-                Testimonials
-              </a>
-            </li> */}
-            {/* <li>
-              <a href="#team" className="page-scroll">
-                Team
-              </a>
-            </li> */}
+            
             <li>
-              <a href="/#contact" className="page-scroll">
+              <Link to="/#contact" className="page-scroll">
                 Contact
-              </a>
+              </Link>
             </li>
             <li>
               {!login && (
@@ -86,9 +99,9 @@ export const Navigation = ({login}) => {
                   <ul className="dropdown-menu " aria-labelledby="dropdownMenu1">
                     <li><Link to="/cart">Cart</Link></li>
                     <li><Link to="/profile">Profile</Link></li>
-                    <li><a href="#orders">My Orders</a></li>
+                    {/* <li><Link to="#orders">My Orders</Link></li> */}
                     <li role="separator" className="divider"></li>
-                    <li><Link to="/logout">Logout</Link></li>
+                    <li><a href="/">Logout</a></li>
                   </ul>
                 </div>
               )}

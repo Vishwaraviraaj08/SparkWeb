@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Header = (props) => {
   return (
@@ -11,12 +12,12 @@ export const Header = (props) => {
                     {props.data ? props.data.title : "Loading"}
                     <span></span>
                   <p id="desc-header">{props.data ? props.data.paragraph : "Loading"}</p>
-                  <a
-                      href="/products"
+                  <Link
+                      to="/products"
                       className="btn btn-custom btn-lg page-scroll"
                   >
                     View Products
-                  </a>{" "}
+                  </Link>{" "}
                 </div>
               </div>
             </div>
