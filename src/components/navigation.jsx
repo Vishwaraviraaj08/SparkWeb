@@ -29,17 +29,17 @@ export const Navigation = ({login}) => {
           <ul className="nav navbar-nav navbar-right">
             
             <li>
-              <a href="#about" className="page-scroll">
+              <a href="/#about" className="page-scroll">
                 About
               </a>
             </li>
             <li>
-              <a href="#services" className="page-scroll">
+              <a href="/#services" className="page-scroll">
                 Services
               </a>
             </li>
             <li>
-              <a href="#portfolio" className="page-scroll">
+              <a href="/#portfolio" className="page-scroll">
                 Infra-Facilities
               </a>
             </li>
@@ -59,7 +59,7 @@ export const Navigation = ({login}) => {
               </a>
             </li> */}
             <li>
-              <a href="#contact" className="page-scroll">
+              <a href="/#contact" className="page-scroll">
                 Contact
               </a>
             </li>
