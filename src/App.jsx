@@ -7,8 +7,8 @@ import { Navigation } from "./components/navigation";
 import { Home } from "./components/Home/home.jsx";
 import Login from './components/newComponents/login';
 import Signup from './components/newComponents/signup.js';
-import Products from './components/newComponents/products';
 import Profile from './components/newComponents/profile';
+import Cart from './components/newComponents/cart';
 import Product from "./components/newComponents/products";
 import ProductDetails from "./components/newComponents/productDetails";
 
@@ -20,6 +20,7 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 const App = () => {
   
   const [login, setLogin] = useState(false)
+  const [userId, setUserId] = useState('')
   return (
     <div>
       <Navigation login={login}/>
@@ -27,9 +28,10 @@ const App = () => {
         
         <Route path='/' element={<Home/>}/>
         {/* add .padding-correction to root elements for the following components */}
-        <Route path='/login' element={<Login login={login} setLogin={setLogin}/>}/>
-        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/login' element={<Login login={login} setLogin={setLogin} setUserId={setUserId}/>}/>
+        <Route path='/signup' element={<Signup setLogin={setLogin} setUserId={setUserId}/>}/>
         <Route path='/profile' element={<Profile/>}/>
+        <Route path='/cart' element={<Cart/>}/>
         <Route path="/products" element={<Product />} />
         <Route path="/:productId" element={<ProductDetails/>}/>
       </Routes>

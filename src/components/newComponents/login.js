@@ -3,7 +3,7 @@ import { Link, Route } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 
-export default function Login({ login, setLogin }) {
+export default function Login({ login, setLogin, setUserId }) {
     const backStyle = {
         background: '#e2e2e2',
         width: '100%',
@@ -80,6 +80,7 @@ export default function Login({ login, setLogin }) {
                             }).then(res => res.json()).then(data => {
                                 if (data.auth === true) {
                                     setLogin(true);
+                                    setUserId(data.id);
                                     console.log(data);
                                     routeChange('/');
                                     setMessage('');
