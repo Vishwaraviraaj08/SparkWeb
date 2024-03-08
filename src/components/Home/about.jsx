@@ -46,35 +46,23 @@ export const About = (props) => {
                         </div>
                     </div>
                     <p className={""}>{' '}</p>
+
                     <p className="text-justify">
-                        CAMWARE ELECTRONICS is an End-to-End Solution provider for “Concept to Product” in Embedded Design and Electronics Manufacturing Services (EMS), Electronics System Design and Manufacturing Services (ESDM) under single roof. Camware is determined to focus on the complete spectrum of state of the art and emerging technologies in EMS to bring a positive change in the arena of Electronics Manufacturing Industries.
+                        Our team at Camware Electronics is driven by a passion for innovation and a dedication to excellence. We specialize in the research and development of products within the embedded systems domain, leveraging our expertise to design and deliver solutions that meet the evolving demands of various industries.
+                    </p>
+                    <p className="text-justify">
+                        At Camware Electronics, we understand the importance of staying ahead in today's fast-paced technological landscape. That's why we invest heavily in research and development, continuously exploring new technologies and methodologies to ensure that our products are at the forefront of innovation.
                     </p>
 
                     <p className="text-justify">
-                        Camware brings the world class quality at competitive price. We undertake prototype to high
-                        volume production in the entire gamut of turnkey EMS solutions. Camware undertakes conceptual
-                        design, manufacture and testing of high quality and reliable PCBAs, Box Build, Products and
-                        Systems Integration Services. Our solutions drive innovations and in turn cost effectiveness in
-                        the processes of manufacturing, supply chain, information exchanges / dissemination, etc.
-                        Camware offers Design, Prototype Development, Batch Production, Final Assembly, Testing, Burn-in
-                        and Pack out. We have state-of-the-art Infrastructure and Modern Day Technological Aids.
+                        Whether it's creating advanced industrial automation systems, developing smart devices for the consumer market, or designing bespoke solutions tailored to specific industry needs, Camware Electronics is committed to delivering excellence in every project we undertake.
                     </p>
+
                     <p className="text-justify">
-                        We are focusing different segments like Defense & Aerospace, power, Telecom, IT, Transportation,
-                        Medical & Healthcare, Automotive, Industrial, Railway, Services, etc.We have committed and
-                        dedicated Manpower to serve the clients in line with our company policy of “Quality on Time”.
+                        Explore our website to learn more about our company, our values, and the exciting projects we're working on. Join us on this journey as we strive to redefine the possibilities of embedded systems technology and make a meaningful impact on the world around us.
                     </p>
-                    <p className="text-justify">
-                        Camware strengths in Design, Manufacturing, Infrastructures, Systems, Skill Sets and TQM
-                        practices enable it to offer High tech, High Mix, Low and Medium Volume Production along with
-                        Value Engineering and Product Data Management for New Product initiative (NPI) and New Product
-                        Development (NPD).Camware is supporting as Original Design Manufacturing (ODM) Company which is
-                        designed with two leading design house for HARDWARE & MECHANICAL design oriented products as
-                        specified by its customers. Such companies allow the brand firm to produce products (either as a
-                        supplement OR solely) without having to engage in the organization OR running of a
-                        factory.Camware also has a separate team to cater IT Infrastructure Management Services (IMS)
-                        needs of clients. The team has the expertise in the entire gamut of IMS services.
-                    </p>
+                        
+                        
                 </div>
             </div>
             <div>
