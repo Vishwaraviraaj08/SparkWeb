@@ -3,7 +3,6 @@ import productInfo from '../../data/productInfo'
 import { Link } from 'react-router-dom'
 
 export default function Cart({cart, setCart}) {
-    console.log(cart)
     const style = {
       border: 'none',
       color: 'black',

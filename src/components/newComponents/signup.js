@@ -90,35 +90,32 @@ export default function SignUp({setLogin, setUserId}) {
                                 setMessage('Password does not match');
                                 return;
                             }
-                            setMessage('');
-                            routeChange('/');
-                            setLogin(true);
-                            // fetch('http://localhost:8080/user/signup', {
-                            //     method: "POST",
-                            //     headers: {
-                            //         "Content-Type": "application/json",
-                            //         "Accept": "application/json",
+                            fetch('https://cute-gray-angelfish-slip.cyclic.app/user/signup', {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json",
+                                    "Accept": "application/json",
 
-                            //     },
-                            //     body: JSON.stringify({ name, email, password, phone})
-                            // })
-                            // .then(res => res.json())
-                            // .then(data => {
-                            //     if (data.created === true) {
-                            //         setLogin(true);
-                            //         setUserId(data.id);
-                            //         console.log(data);
-                            //         routeChange('/');
-                            //         setMessage('');
-                            //     }
-                            //     else {
-                            //         setMessage(data.message);
-                            //         console.log(data);
-                            //     }
-                            // })
-                            // .catch(err => {
-                            //     console.log(err);
-                            // });
+                                },
+                                body: JSON.stringify({ name, email, password, phone})
+                            })
+                            .then(res => res.json())
+                            .then(data => {
+                                if (data.created === true) {
+                                    setLogin(true);
+                                    setUserId(data.id);
+                                    console.log(data);
+                                    routeChange('/');
+                                    setMessage('');
+                                }
+                                else {
+                                    setMessage(data.message);
+                                    console.log(data);
+                                }
+                            })
+                            .catch(err => {
+                                console.log(err);
+                            });
                         }}>Sign Up</button>
                         <h1 style={{ margin: '40px' }}></h1>
                     </div>
