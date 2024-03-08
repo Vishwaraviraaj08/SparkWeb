@@ -13,7 +13,7 @@ export const About = (props) => {
                         <div className="about-text">
                             <h2>About Us</h2>
                             <p className="text-justify">
-                                <b>{'CAMWARE TECHNOLOGIES '}</b>{props.data ? props.data.paragraph : "loading..."}</p>
+                                <b>{'CAMWARE ELECTRONICS '}</b>{props.data ? props.data.paragraph : "loading..."}</p>
 
 
                             <br/>
@@ -47,7 +47,7 @@ export const About = (props) => {
                     </div>
                     <p className={""}>{' '}</p>
                     <p className="text-justify">
-                        CAMWARE TECHNOLOGIES is an End-to-End Solution provider for “Concept to Product” in Embedded Design and Electronics Manufacturing Services (EMS), Electronics System Design and Manufacturing Services (ESDM) under single roof. Camware is determined to focus on the complete spectrum of state of the art and emerging technologies in EMS to bring a positive change in the arena of Electronics Manufacturing Industries.
+                        CAMWARE ELECTRONICS is an End-to-End Solution provider for “Concept to Product” in Embedded Design and Electronics Manufacturing Services (EMS), Electronics System Design and Manufacturing Services (ESDM) under single roof. Camware is determined to focus on the complete spectrum of state of the art and emerging technologies in EMS to bring a positive change in the arena of Electronics Manufacturing Industries.
                     </p>
 
                     <p className="text-justify">

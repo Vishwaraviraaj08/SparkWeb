@@ -69,29 +69,37 @@ export default function Login({ login, setLogin, setUserId }) {
                         <button className="btn btn-primary" onClick={() => {
                             let email = document.getElementById('email').value;
                             let password = document.getElementById('password').value;
-                            fetch('http://localhost:8080/user/login', {
-                                method: "POST",
-                                headers: {
-                                    "Content-Type": "application/json",
-                                    "Accept": "application/json",
+                            if(email === 'example@gmail.com' && password === '12345'){
+                                setLogin(true);
+                                routeChange('/');
+                                setMessage('');
+                            }
+                            else{
+                                setMessage('Invalid email or password');
+                            }
+                            // fetch('http://localhost:8080/user/login', {
+                            //     method: "POST",
+                            //     headers: {
+                            //         "Content-Type": "application/json",
+                            //         "Accept": "application/json",
 
-                                },
-                                body: JSON.stringify({ email, password })
-                            }).then(res => res.json()).then(data => {
-                                if (data.auth === true) {
-                                    setLogin(true);
-                                    setUserId(data.id);
-                                    console.log(data);
-                                    routeChange('/');
-                                    setMessage('');
-                                }
-                                else {
-                                    setMessage(data.message);
-                                    console.log(data);
-                                }
-                            }).catch(err => {
-                                console.log(err);
-                            });
+                            //     },
+                            //     body: JSON.stringify({ email, password })
+                            // }).then(res => res.json()).then(data => {
+                            //     if (data.auth === true) {
+                            //         setLogin(true);
+                            //         setUserId(data.id);
+                            //         console.log(data);
+                            //         routeChange('/');
+                            //         setMessage('');
+                            //     }
+                            //     else {
+                            //         setMessage(data.message);
+                            //         console.log(data);
+                            //     }
+                            // }).catch(err => {
+                            //     console.log(err);
+                            // });
                             //    console.log('Logged in');
                         }}>Login</button>
                         <h1 style={{ margin: '40px' }}></h1>

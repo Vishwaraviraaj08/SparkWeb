@@ -40,7 +40,7 @@ export const Navigation = ({login}) => {
             <span className="icon-bar"></span>{" "}
           </button>
           <Link className="navbar-brand page-scroll" to="/#page-top">
-            CAMWARE TECH
+          CAMWARE ELECTRONICS
           </Link>{" "}
         </div>
 
